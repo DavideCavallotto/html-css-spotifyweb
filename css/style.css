@@ -11,10 +11,19 @@ html {
 /* Palette colori  */
 
 :root {
-    
+    --darkblue: #10141B;
+    --naturalgray: #A8A8A8;
+    --dark-grey: #202020;
 }
 
 /* Layout */
+#app {
+    height: 100vh;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     font-size: 18px;
 }
@@ -86,6 +95,10 @@ figure > img {
     align-items: center;
 }
 
+.flex {
+    display: flex;
+}
+
 /* Component-Class */
 
 .button {
@@ -95,4 +108,107 @@ figure > img {
     background-color: white;
     border-radius: 20px;
     padding: 0 18px;
+}
+
+/* Music Player */
+
+.app-content {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.sidebar {
+    background-color: black;
+    flex-grow: 1;
+    max-width: 60px;    
+    flex-shrink: 0;
+}
+
+.page-content {
+    background-color: #10141B;
+    flex-grow: 1;
+    overflow: auto;
+    
+}
+
+/* Player */
+
+.toolbar {
+    background-color: #10141B;
+    height: auto;
+    flex-shrink: 0;
+    color: white;
+}
+
+.toolbar .name-song {
+    color: #A8A8A8;
+}
+
+.track {
+    display: flex;
+}
+
+.album-information {
+    display: flex;
+}
+
+.toolbar img {
+    width: 42px;
+}
+
+.track-information {
+    margin-left: 12px;
+    font-size: 9px;
+}
+
+
+
+
+
+
+
+
+
+/* Small Device */
+
+@media (min-width: 480px) { 
+    
+}
+
+/* Medium Device */
+
+@media (min-width: 639px) { 
+    .sidebar {
+        max-width: 230px;
+    }
+    
+}
+
+/* Large Device */
+
+@media (min-width: 878px) {
+
+}
+
+
+/* Debug */
+
+.debug .app-content,
+.debug .toolbar {
+    border: 1px solid orange;
+    padding: 10px;
+    min-height: 100px;
+}
+
+.debug .sidebar,
+.debug .page-content {
+    border: 1px solid green;
+    padding: 10px;
+}
+
+.debug .track,
+.debug .control-video,
+.debug .control-volume {
+    border: 1px solid blue;
+    padding: 10px;
 }
