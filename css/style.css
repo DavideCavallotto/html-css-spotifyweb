@@ -135,10 +135,9 @@ figure > img {
 
 .sidebar {
     background-color: black;
-    color: white;
-    flex-grow: 1;
+    color: white;    
     width: 50px;    
-    flex-shrink: 0;
+    flex-shrink: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-between;    
@@ -225,14 +224,14 @@ figure > img {
     font-weight: bold;
 }
 
-.download-container::after {
+.line-white::after {
     content:'';
     display: block;
     width: 180px;
     height: 1px;
     background-color: var(--naturalgray);    
 }
-
+/* Page Content */
 /* Banner Upgrade */
 
 .banner-upgrade {
@@ -244,7 +243,8 @@ figure > img {
 .page-content {
     background-color: #141922;
     flex-grow: 1;
-    overflow: auto;    
+    overflow: auto;  
+    color: white;  
 }
 
 /* .debug.banner-upgrade {
@@ -272,7 +272,33 @@ figure > img {
     font-weight: bold;
 }
 
+/* Page Content Description */
 
+.container-list {    
+    text-transform: uppercase;
+    color: var(--naturalgray);
+    flex-wrap: wrap;
+    gap: 45px;
+    padding: 22px 0;
+}
+
+.container-list a {
+    color: var(--naturalgray);
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.greenline::after {
+    content:'';
+    display: block;
+    width: 50px;
+    height: 1px;
+    background-color:rgb(0, 255, 0);
+    margin-left: 50%;
+    transform: translate(-50%, -50%);    
+}
+
+/* Album List */
 
 
 
@@ -516,7 +542,7 @@ figure > img {
         display: initial;
     }
 
-    .download-container {
+    .line-white {
         display: initial;
     }
     
