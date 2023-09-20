@@ -16,6 +16,10 @@ html {
     --dark-grey: #282828;
 }
 
+:root {
+    --video-player: 25%;    
+}
+
 /* Layout */
 #app {
     height: 100vh;
@@ -103,6 +107,10 @@ figure > img {
     font-size: 13px;
 }
 
+.none {
+    display: none;
+}
+
 /* Component-Class */
 
 .button {
@@ -124,8 +132,12 @@ figure > img {
 .sidebar {
     background-color: black;
     flex-grow: 1;
-    max-width: 60px;    
+    width: 50px;    
     flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
 }
 
 .page-content {
@@ -135,8 +147,27 @@ figure > img {
     
 }
 
+/* Sidebar */
+
+.bg-grey-circle {
+    background-color: var(--naturalgray);
+    aspect-ratio: 1;
+    border-radius: 999px;
+    margin-top: 22px;
+}
+
+.top-icon div {
+    margin-bottom: 20px;
+}
+
+.contrast-icon {
+    filter: contrast(0);
+}
+
+
+
 /* Player */
-/* Track */
+/* Album Preview */
 
 .toolbar {
     background-color:#282828;
@@ -155,11 +186,12 @@ figure > img {
 
 .name-song:hover {
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .hover-white:hover {
     color: white;
-    cursor: grab;
+    cursor: pointer;
 }
 
 .track {
@@ -215,7 +247,7 @@ figure > img {
 
 .play-bt:hover {
     transform: scale(1.2);
-    cursor: grab;     
+    cursor: pointer;     
 }
 
 /* Video Bar */
@@ -238,7 +270,7 @@ figure > img {
 
 .video-line-white { 
     height: 3px;   
-    width: 25%;
+    width: var(--video-player);
     background-color: #ffffff;
     border-radius: 20px;
     position: absolute;
@@ -246,22 +278,23 @@ figure > img {
 
 .video-line:hover .video-line-white {
     background-color: lime;
-    cursor: grab;
+    cursor: pointer;
 }
 
 .point {
-    left: 25%;
-    bottom: -4px;
+    left: var(--video-player);
+    top: 50%;
     padding: 5px;
     border-radius: 200px;
     background-color: white;
     position: absolute;
     display: none;
+    transform: translate(-50%, -50%);
 }
 
 .video-line:hover .point{
     display: inline-block;
-    cursor: grab;
+    cursor: pointer;
 }
 
 .video-line-grey { 
@@ -286,7 +319,7 @@ figure > img {
 
 .volume-line-white { 
     height: 3px;   
-    width: 25%;
+    width: var(--video-player);
     background-color: #ffffff;
     border-radius: 20px;
     position: absolute;
@@ -294,12 +327,12 @@ figure > img {
 
 .volume-line:hover .volume-line-white {
     background-color: lime;
-    cursor: grab;    
+    cursor: pointer;    
 }
 
 .volume-line:hover .point {
     display: inline-block; 
-    cursor: grab;   
+    cursor: pointer;   
 }
 
 .volume-line-grey { 
@@ -325,12 +358,16 @@ figure > img {
 
 @media (min-width: 639px) { 
     .sidebar {
-        max-width: 230px;
+        width: 230px;
     }
 
     .single-line {
         display: flex;
         gap: 2px;
+    }
+
+    .toolbar img {
+        max-width: 42px;
     }
     
 }
