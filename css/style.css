@@ -144,12 +144,6 @@ figure > img {
     justify-content: space-between;    
 }
 
-.page-content {
-    background-color: #141922;
-    flex-grow: 1;
-    overflow: auto;
-    
-}
 
 /* Sidebar */
 
@@ -238,6 +232,48 @@ figure > img {
     height: 1px;
     background-color: var(--naturalgray);    
 }
+
+/* Banner Upgrade */
+
+.banner-upgrade {
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    
+}
+
+.page-content {
+    background-color: #141922;
+    flex-grow: 1;
+    overflow: auto;    
+}
+
+/* .debug.banner-upgrade {
+    padding: 30px;
+} */
+
+.banner-upgrade {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 22px 7px 30px;
+}
+
+.button-upgrade {
+    width: 220px;
+    color: black;
+    line-height: 40px;
+    text-align: center;    
+    border-radius: 30px;
+    padding: 0 18px;
+    border: 2px solid white;
+    background-color: transparent;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+
 
 
 
