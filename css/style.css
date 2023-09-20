@@ -203,6 +203,44 @@ figure > img {
     color: var(--naturalgray);
 }
 
+.font-grey {
+    font-size: 12px;
+    color: var(--naturalgray);
+}
+
+.title-list {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.plus-button {
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+.header-list {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.account {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.download-container::after {
+    content:'';
+    display: block;
+    width: 180px;
+    height: 1px;
+    background-color: var(--naturalgray);    
+}
+
+
+
 
 
 
@@ -436,6 +474,14 @@ figure > img {
 
     .top-icon figure {
         align-items: center;
+    }
+
+    .playlist-list {
+        display: initial;
+    }
+
+    .download-container {
+        display: initial;
     }
     
 }
